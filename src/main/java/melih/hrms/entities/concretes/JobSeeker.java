@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import melih.hrms.core.entities.concretes.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -36,10 +37,8 @@ public class JobSeeker {
     @Column(name = "last_name")
     private String lastName;
 
-    @Temporal(TemporalType.DATE)
     @JsonFormat(pattern = "yyyy-mm-dd")
     @NotNull
-    @NotBlank
     @Column(name = "birth_date")
     private Date birthDate;
 
@@ -53,7 +52,6 @@ public class JobSeeker {
     private boolean status;
 
     @NotNull
-    @NotBlank
     @Column(name = "job_status")
     private boolean jobStatus;
 

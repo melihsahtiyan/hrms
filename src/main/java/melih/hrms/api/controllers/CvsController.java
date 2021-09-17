@@ -23,6 +23,11 @@ public class CvsController {
         return this.cvService.add(cv);
     }
 
+    @GetMapping("/getall")
+    public DataResult<List<Cv>> getAll(){
+        return this.cvService.getAll();
+    }
+
     @GetMapping("/getAllBySchool_SchoolName")
     public DataResult<List<Cv>> getAllBySchool_SchoolName(@RequestParam String schoolName){
         return this.cvService.getAllBySchool_SchoolName(schoolName);

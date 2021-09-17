@@ -1,7 +1,10 @@
-package melih.hrms.entities.concretes;
+package melih.hrms.core.entities.concretes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import melih.hrms.entities.concretes.Employer;
+import melih.hrms.entities.concretes.JobSeeker;
+import melih.hrms.entities.concretes.SystemStaff;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;

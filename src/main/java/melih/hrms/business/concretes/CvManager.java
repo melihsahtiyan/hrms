@@ -29,6 +29,11 @@ public class CvManager implements CvService {
         return new SuccessResult("Cv'niz eklendi");
     }
 
+    @Override
+    public DataResult<List<Cv>> getAll() {
+        return new SuccessDataResult<List<Cv>>(this.cvDao.findAll());
+    }
+
 
     @Override
     public DataResult<List<Cv>> getAllBySchool_SchoolName(String schoolName) {

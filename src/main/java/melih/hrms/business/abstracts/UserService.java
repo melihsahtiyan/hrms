@@ -2,7 +2,7 @@ package melih.hrms.business.abstracts;
 
 import melih.hrms.core.utilities.results.DataResult;
 import melih.hrms.core.utilities.results.Result;
-import melih.hrms.entities.concretes.User;
+import melih.hrms.core.entities.concretes.User;
 
 import java.util.List;
 
@@ -14,4 +14,5 @@ public interface UserService {
 
     DataResult<User> getUserByEmail(String email);
 
+    Result delete(User user);
 }

@@ -3,8 +3,7 @@ package melih.hrms.api.controllers;
 import melih.hrms.business.abstracts.UserService;
 import melih.hrms.core.utilities.results.DataResult;
 import melih.hrms.core.utilities.results.ErrorDataResult;
-import melih.hrms.core.utilities.results.Result;
-import melih.hrms.entities.concretes.User;
+import melih.hrms.core.entities.concretes.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +31,12 @@ public class UsersController {
     public ResponseEntity<?> add(@Valid @RequestBody User user) {
 
         return ResponseEntity.ok(this.userService.add(user)) ;
+    }
+
+    @PostMapping(value="/delete")
+    public ResponseEntity<?> delete(@Valid @RequestBody User user) {
+
+        return ResponseEntity.ok(this.userService.delete(user)) ;
     }
 
     @GetMapping("/getAll")

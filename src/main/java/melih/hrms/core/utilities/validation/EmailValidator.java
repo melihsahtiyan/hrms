@@ -2,7 +2,7 @@ package melih.hrms.core.utilities.validation;
 
 import lombok.NoArgsConstructor;
 import melih.hrms.business.abstracts.UserService;
-import melih.hrms.entities.concretes.User;
+import melih.hrms.core.entities.concretes.User;
 import org.springframework.stereotype.Service;
 
 @Service

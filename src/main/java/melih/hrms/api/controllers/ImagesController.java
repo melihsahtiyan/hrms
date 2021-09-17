@@ -37,6 +37,7 @@ public class ImagesController {
         return this.imageService.delete(image);
     }
 
+    @GetMapping("/getall")
     public DataResult<List<Image>> getAll(){
         return this.imageService.getAll();
     }

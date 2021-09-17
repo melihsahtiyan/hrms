@@ -7,15 +7,15 @@ import java.util.List;
 
 public interface SchoolDao extends JpaRepository<School, Integer> {
 
-    public List<School> getAllBySchoolNameContainsAndDepartmentContains(String schoolName, String department);
+    List<School> getAllBySchoolNameContainsAndDepartmentContains(String schoolName, String department);
 
 
-    public List<School> getAllBySchoolNameContainsOrDepartmentContains(String schoolName, String department);
+    List<School> getAllBySchoolNameContainsOrDepartmentContains(String schoolName, String department);
 
 
-    public List<School> getAllBySchoolNameContains(String schoolName);
+    List<School> getAllBySchoolNameContains(String schoolName);
 
 
-    public List<School> getAllByDepartmentContains(String department);
+    List<School> getAllByDepartmentContains(String department);
 
 }

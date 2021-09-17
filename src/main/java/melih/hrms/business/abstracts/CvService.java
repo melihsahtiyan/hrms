@@ -10,6 +10,8 @@ public interface CvService {
 
     public Result add(Cv cv);
 
+    DataResult<List<Cv>> getAll();
+
     public DataResult<List<Cv>> getAllBySchool_SchoolName(String schoolName);
 
     public DataResult<List<Cv>> getByOrderByGraduationDate();

@@ -36,6 +36,12 @@ public class JobPositionMananger implements JobPositionService {
     }
 
     @Override
+    public Result delete(JobPosition jobPosition) {
+        this.jobPositionDao.delete(jobPosition);
+        return new SuccessResult();
+    }
+
+    @Override
     public DataResult<List<JobPosition>> getAllSortedAsc() {
         Sort sort = Sort.by(Sort.Direction.ASC,"jobPositionName");
         return new SuccessDataResult<List<JobPosition>>(this.jobPositionDao.findAll(sort));

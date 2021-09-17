@@ -7,7 +7,14 @@ import melih.hrms.entities.concretes.JobPosition;
 import java.util.List;
 
 public interface JobPositionService {
-    DataResult<List<JobPosition>> getAll();
+
     Result add(JobPosition jobPosition);
+
+    Result delete(JobPosition jobPosition);
+
+    DataResult<List<JobPosition>> getAll();
+
     DataResult<List<JobPosition>> getAllSortedAsc();
+
+
 }

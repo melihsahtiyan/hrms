@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import melih.hrms.core.entities.concretes.User;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
